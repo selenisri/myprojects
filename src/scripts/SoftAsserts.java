@@ -14,7 +14,7 @@ public class SoftAsserts {
 	{
 		
 		//working out on the softassert
-		
+		//hello
 		System.out.println("Hello I will work !");
 		softAssert.assertEquals(true, false); //Now even if this Assert Line Fails , Next will get Executed.
 		System.out.println("Iam Fine");
