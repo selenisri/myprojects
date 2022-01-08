@@ -13,7 +13,7 @@ public class SoftAsserts {
 	public void Testing()
 	{
 		
-		//working out on the softassert
+		//working out on the softassert //iam in github
 		
 		System.out.println("Hello I will work !");
 		softAssert.assertEquals(true, false); //Now even if this Assert Line Fails , Next will get Executed.
