@@ -14,9 +14,7 @@ public class SoftAsserts {
 	{
 		
 
-		//working out on the softassert
-		//hello
-		//add it in the helloindeed branch
+		//iam learing branch
 
 		System.out.println("Hello I will work !");
 		softAssert.assertEquals(true, false); //Now even if this Assert Line Fails , Next will get Executed.
