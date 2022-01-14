@@ -40,14 +40,14 @@ public class Jumptoalert {
 	        driver.manage().window().maximize();
 	        WebElement button= driver.findElement(By.xpath("//input[@name='alert']"));
 	        button.click();
-	        driver.switchTo().alert().accept();
-	        driver.close();
+	        driver.switchTo().alert().dismiss();
+	        
 	        
 	  }
 	 
 	 
 	 @Test(priority=3)
-	 public void Accept() 
+	 public void Accept() throws InterruptedException 
 	
 	 {
 		 System.setProperty("webdriver.chrome.driver","C:\\Users\\srira\\OneDrive\\Desktop\\chromedriver.exe");
@@ -55,10 +55,41 @@ public class Jumptoalert {
 	    	String baseUrl = "https://chercher.tech/practice/practice-pop-ups-selenium-webdriver";  
 	        driver.get(baseUrl);
 	        driver.manage().window().maximize();
-	        WebElement button= driver.findElement(By.xpath("//input[@name='prompt']"));
-	        button.click();
-	        driver.switchTo().alert().sendKeys("Hello");
+	        WebElement button= driver.findElement(By.id("double-click"));
+	        Actions action = new Actions(driver);
+	        action.doubleClick(button).perform();
+	        
+	      
+	       
 	  }
+	 
+	 
+	 
+	 @Test(priority=4)
+	 public void MovetoElement() throws InterruptedException 
+	
+	 {
+		    System.setProperty("webdriver.chrome.driver","C:\\Users\\srira\\OneDrive\\Desktop\\chromedriver.exe");
+			WebDriver driver = new ChromeDriver();
+	    	String baseUrl = "https://chercher.tech/practice/practice-pop-ups-selenium-webdriver";  
+	        driver.get(baseUrl);
+	        driver.manage().window().maximize();
+	        WebElement elementh  = driver.findElement(By.id("sub-menu"));
+	        Actions action = new Actions(driver);
+	        action.moveToElement(elementh).perform();
+	        driver.findElement(By.xpath("//a[contains(text(),'Google')]")).click();
+	        
+	  }
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 	 
 	
 	
